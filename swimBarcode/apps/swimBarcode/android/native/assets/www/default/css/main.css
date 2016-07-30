@@ -1,0 +1,208 @@
+
+/* Stylesheet content from css/main.css in folder common */
+/* Reset CSS */
+a,abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video
+	{
+	margin: 0;
+	padding: 0;
+}
+
+/* Worklight container div */
+body {
+	height: 460px;
+	margin: 0 auto;
+	width: 320px;
+}
+
+#Container {
+	height: 50%;
+	width: 100%;
+}
+
+div.search {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#label {
+	text-align: center;
+}
+
+#cart {
+	margin: auto;
+	height: 10px;
+	width: 10px;
+	position: fixed;
+}
+
+#img {
+	height: 25%;
+	width: 90%;
+	margin: 2.5% 5% 2.5% 5%;
+}
+
+.left {
+	top: 37.5%;
+	left: 5%;
+	height: 7.5%;
+	width: 7.5%;
+	position: absolute;
+}
+
+.right {
+	top: 37.5%;
+	right: 5%;
+	height: 7.5%;
+	width: 7.5%;
+	position: absolute;
+}
+
+div.mobiles {
+	height: 300px;
+	width: 100%;
+	margin: 10% auto;
+	display: inline;
+}
+
+div.j5 {
+	width: 33%;
+	float: left;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+div.j7 {
+	width: 33%;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	text-align: center;
+}
+
+div.g5 {
+	width: 33%;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#j5 {
+	width: 60%;
+	height: 125px;
+	margin: 5% 10% 5% 10%;
+}
+
+#j7 {
+	width: 60%;
+	height: 125px;
+	margin: 5% 10% 5% 10%;
+}
+
+#g5 {
+	width: 60%;
+	height: 125px;
+	margin: 5% 10% 5% 10%;
+}
+
+#logInHeader {
+	z-index: 1;
+}
+
+#logInContainer {
+	z-index: 0;
+	position: fixed;
+	margin-top: 30%;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+}
+
+div.loginEmail {
+	display: inline;
+}
+
+#loginButton {
+	width: 50%;
+	margin: 20px auto;
+	border: solid;
+}
+
+#lSignUpButton {
+	width: 50%;
+	margin: 20px auto;
+	border: solid;
+}
+
+#signUpButton {
+	width: 50%;
+	margin: 20px auto;
+	border: solid;
+}
+
+#signUpContainer {
+	z-index: 0;
+	position: fixed;
+	margin-top: 30%;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+}
+
+#mac_pro {
+	width: 80%;
+	height: 60px;
+	margin: 5% 10% 5% 10%;
+}
+
+#hp {
+	width: 80%;
+	height: 60px;
+	margin: 5% 10% 5% 10%;
+}
+
+#alien {
+	width: 80%;
+	height: 60px;
+	margin: 5% 10% 5% 10%;
+}
+
+div.Account {
+	color: #369cda;
+	margin-top: 20%;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: outset;
+}
+
+#AccountButton {
+	border-radius: 50%;
+}
+
+#navBar {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#payment {
+	width: 80%;
+	margin: 10% 10%;
+}
+/* Stylesheet content from css/main.css in folder android */
+
+/* this CSS file extends the application CSS file found under common\css */
+
+/* body should stretch in an Android application */
+html, body {
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	overflow: auto;
+}

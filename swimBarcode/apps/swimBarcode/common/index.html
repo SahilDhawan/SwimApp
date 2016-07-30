@@ -1,0 +1,552 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.css" rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.structure-1.4.5.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.inline-svg-1.4.5.min.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.external-png-1.4.5.min.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.inline-png-1.4.5.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile-1.4.5.css" rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.inline-png-1.4.5.min.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.external-png-1.4.5.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.structure-1.4.5.min.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.inline-svg-1.4.5.css"
+	rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.5.css">
+<link rel="stylesheet"
+	href="jqueryMobile/jquery.mobile.icons-1.4.5.min.css">
+<script>window.$ = window.jQuery = WLJQ;</script>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+<script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body style="display: none; background-color: #369cda">
+	<div data-role="page" id="logIn" style="background-color: #369cda;">
+		<div data-role="header" id="logInHeader" data-position="fixed"
+			style="background-color: #369cda">
+			<h3
+				style="background-color: #369cda; color: white; font-family: Apple Chancery">SWIM</h3>
+		</div>
+		<div data-dojo-type="dojox.mobile.Container" id="logInContainer"
+			style="background-color: #369cda">
+			<div class="loginEmail">
+				<label
+					style="background-color: #369cda; color: white; text-align: center"
+					id="loginEmailLabel">EMAIL ID</label> <input type="text"
+					name="text" id="lEmailText" data-theme="a">
+			</div>
+			<div class="loginPassword">
+				<label style="color: white; text-align: center"
+					id="loginPasswordLabel">PASSWORD</label> <input type="password"
+					name="text1" id="lPasswordText">
+			</div>
+			<a href="#" data-role="button" id="loginButton"
+				style="background-color: #f8b932; color: white" onclick="login()">LOG
+				IN</a> <a href="#SignUp" data-role="button" id="lSignUpButton"
+				style="background-color: #f8b932; color: white">SIGN UP</a> <label
+				id="label0" style="text-align: center; color: white"></label>
+		</div>
+	</div>
+
+	<div data-role="page" id="page" onLoad="slide()">
+
+		<div data-dojo-type="dojox.mobile.Container" id="Container"
+			style="background-color: #369cda">
+			<div data-role="header" id="header" data-position="absolute"
+				style="background-color: #369cda">
+
+				<a href="#" data-role="button" id="scanButton"
+					style="background-color: #369cda; color: white">BS</a>
+				<h1
+					style="background-color: #369cda; color: white; font-family: Apple Chancery">SWIM</h1>
+				<a href="#Account" data-role="button" id="button9"
+					style="background-color: #369cda; color: white">A</a>
+
+
+			</div>
+			<script>
+						$('#scanButton').bind('click', doScan);
+
+							function doScan(){
+   							 cordova.exec(onScanSuccess, onScanFailure, 'BarcodeScanner', 'scan', []);
+								}
+
+							function onScanSuccess(result) {
+ 							 alert("We got a barcode\n" +
+     						   "Result: " + result.text + "\n" +
+      			   			   "Format: " + result.format + "\n" +
+       						   "Cancelled: " + result.cancelled);xg
+								}
+
+							function onScanFailure(error) {
+ 								 alert("Scanning failed: " + error);
+								}
+								
+					</script>
+			<div class="search">
+				<input data-dojo-type="dojox.mobile.SearchBox"
+					data-dojo-props="type:'search'"
+					placeholder="Search for products and brands"
+					style="text-align: center">
+			</div>
+			<img id="img" src="swim_images/swim_image0.jpg">
+
+		</div>
+
+		<hr />
+		<div class="mobiles" style="z-index: 3; position: relative">
+			<label id="label">NEW LAUNCHES-MOBILES</label>
+			<div class="j5">
+				<img src="swim_images/samsungj5.jpg" id="j5"><br /> <a
+					href="#SamsungJ5"
+					style="color: black; font-size: 80%; text-align: center">SAMSUNG
+					Galaxy J5</a> <br> <label><b style="text-align: center">RS.
+						12,990</b></label>
+				<ul style="font-size: 50%">
+					<li>5.2" sAMOLED Display</li>
+					<li>13MP|5MP; Dual Flash</li>
+					<li>Android Marshmallow 6</li>
+					<li>3100mAh Battery</li>
+				</ul>
+			</div>
+			<div class="j7">
+				<img src="swim_images/samsungj7.jpg" id="j7"> <br /> <a
+					href="#SamsungJ7"
+					style="color: black; font-size: 80%; text-align: center">SAMSUNG
+					Galaxy J7</a> <br> <label><b style="text-align: center">RS.
+						15,990</b></label>
+				<ul style="font-size: 50%">
+					<li>5.5" sAMOLED Display</li>
+					<li>13MP|5MP; Dual Flash</li>
+					<li>Android Marshmallow 6</li>
+					<li>3300mAh Battery</li>
+				</ul>
+			</div>
+			<div class="g5">
+				<img src="swim_images/lgG5.jpg" id="g5"> <br /> <a
+					href="#LgG5"
+					style="color: black; font-size: 80%; text-align: center">LG G5</a>
+				<br> <br> <label><b style="text-align: center">RS
+						47,990</b></label>
+				<ul style="font-size: 50%">
+					<li>5.3" Quad HD Display</li>
+					<li>2.1GHz Snapdragon™ 820</li>
+					<li>4GB RAM & 32GB ROM</li>
+				</ul>
+			</div>
+		</div>
+		<br /> <label style="text-align: center; z-index: 2; margin-top: 10%">NEW
+			LAUNCHES-LAPTOPS</label>
+		<div class="mobiles" style="z-index: 1; position: relative">
+			<hr />
+			<div class="j5">
+				<img src="swim_images/mac_pro.jpg" id="mac_pro"> <a
+					href="#MacPro"
+					style="color: black; font-size: 80%; text-align: center">Apple
+					Macbook </a> <br> <label><b style="text-align: center">Rs.
+						143,900</b></label>
+				<ul style="font-size: 50%">
+					<li>Core i7</li>
+					<li>16 GB RAM</li>
+					<li>256 GB SSD</li>
+					<li>Mac OS</li>
+				</ul>
+			</div>
+			<div class="j7">
+				<img src="swim_images/hp.jpg" id="hp"> <a href="#HP"
+					style="color: black; font-size: 80%; text-align: center">HP
+					15-ac123tx</a> <br /> <label><b style="text-align: center">Rs.
+						40,990</b></label>
+				<ul style="font-size: 50%">
+					<li>AMD Radeon R5 GPU</li>
+					<li>DTS Studio Sound</li>
+					<li>Windows 10 OS</li>
+					<li>island-style keyboard</li>
+				</ul>
+			</div>
+			<div class="g5">
+				<img src="swim_images/alienware.jpg" id="alien"> <a
+					href="#AlienWare"
+					style="color: black; font-size: 80%; text-align: center">Alienware
+					R2</a> <br> <label><b style="text-align: center">Rs.
+						166,991</b></label>
+				<ul style="font-size: 50%">
+					<li>Core i7</li>
+					<li>16 GB RAM</li>
+					<li>1 TB HDD</li>
+					<li>Windows 10</li>
+				</ul>
+			</div>
+			<br />
+		</div>
+		<hr />
+	</div>
+
+
+
+	<div data-role="page" id="SignUp" style="background-color: #369cda">
+		<div data-role="header" id="header0" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#logIn" data-role="button" id="button" data-icon="back"
+				style="background-color: #369cda " onclick = "clearText()"></a>
+			<h3
+				style="background-color: #369cda; color: white; font-family: Apple Chancery">SWIM</h3>
+		</div>
+		<div data-dojo-type="dojox.mobile.Container" id="signUpContainer"
+			style="background-color: #369cda">
+			<input type="text" name="text2" id="signEmail" placeholder="EMAIL">
+			<input type="text" name="text3" id="signName" placeholder="NAME">
+			<input type="text" name="text4" id="signMobile"
+				placeholder="MOBILE NUMBER"> <input type="text" name="text5"
+				id="signAddress" placeholder="ADDRESS"> <input
+				type="password" name="text6" id="signPassword"
+				placeholder="PASSWORD"> <input type="password" name="text7"
+				id="signConfirm" placeholder="CONFIRM PASSWORD"> <a href="#"
+				data-role="button" id="signUpButton"
+				style="color: white; background-color: #F8B93C" onclick="SignUp()">SIGN
+				UP</a> <label id="label1" style="text-align: center; color: white"></label>
+		</div>
+	</div>
+
+
+
+
+
+	<div data-role="page" id="Account">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda; z-index: 1">
+			<h3 style="color: white;">ACCOUNT</h3>
+		</div>
+		<div data-role="navbar" id="navBar"
+			style="position: absolute; z-index: 0">
+			<ul>
+				<li><a href="#page" id="item"
+					style="background-color: #369cda; color: white">Home</a></li>
+				<li><a href="#Account" id="item0"
+					style="background-color: #369cda; color: white">Account</a></li>
+				<li><a href="#Cart" id="item1"
+					style="background-color: #369cda; color: white">Cart</a></li>
+			</ul>
+		</div>
+		<br /> <br /> <label style="font-size: 200%; text-align: center"><b
+			style="font-family: Malayalam MN">ACCOUNT DETAILS</b> </label>
+		<div class="Account">
+			<label style="text-align: center; font-size: 200%" id="labelName">Name</label>
+			<label style="text-align: center" id="labelEmail">Email</label> <label
+				style="text-align: center" id="labelMobile">Mobile</label> <label
+				style="text-align: center" id="labelAddress">Address</label>
+		</div>
+		<a href="#" data-role="button" id="button11"
+			style="background-color: #369cda; color: white; margin: 10% auto; width: 50%"
+			onclick="clearText()">Log Out</a>
+	</div>
+
+
+
+	<div data-role="page" id="Cart">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<h3 style="color: white;">CART</h3>
+		</div>
+		<div data-role="navbar" id="navBar" style="position: relative">
+			<ul>
+				<li><a href="#page" id="item"
+					style="background-color: #369cda; color: white">Home</a></li>
+				<li><a href="#Account" id="item0"
+					style="background-color: #369cda; color: white">Account</a></li>
+				<li><a href="#Cart" id="item1"
+					style="background-color: #369cda; color: white">Cart</a></li>
+			</ul>
+		</div>
+		<div
+			style="bottom: 0; position: relative; width: 70%; margin: 20px 15%"
+			id="cartDiv">
+			<label id="price" style="text-align: center; color: #369cda"></label>
+			<a href="#" data-role="button" id="button8"
+				style="background-color: #fb8a3d; color: white" onclick="proceed()">Proceed
+				To Checkout</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="SamsungJ5">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button1" data-icon="back"
+				style="background-color: #369cda"></a>
+			<h3 style="color: white">Product Detail</h3>
+		</div>
+		<label style="text-align: center"><b>SAMSUNG Galaxy J5 - 6
+				(New 2016 Edition) (Black, 16 GB)</b></label> <br /> <img
+			src="swim_images/samsungj5.jpg"
+			style="width: 50%; height: 50%; margin: 5% 25% 5% 25%" />
+		<div>
+			<label>Selling Price :Rs <del>13999</del></label> <label
+				style="color: Red">Rs. 12990</label> <a href="#" data-role="button"
+				id="button0"
+				style="background-color: #fb8a3d; color: white; width: 50%; margin-right: auto; margin-left: auto"
+				onclick="AtcJ5()">Add to Cart</a> <a href="#" data-role="button"
+				id="button0"
+				style="background-color: lime; color: white; width: 50%; margin-right: auto; margin-left: auto"
+				onclick="buyJ5()">Buy Now</a> <br />
+			<hr />
+			<br />
+			<div>
+				<label style="background-color: silver; text-indent: 5%">WARRANTY</label>
+				<label style="margin: 0% 5% 0% 5%">1 Year Manufacturer
+					Warranty For Phone And 6 Months Warranty For the Accessories In The
+					Box</label> <label style="background-color: silver; text-indent: 5%">SPECIFICATIONS</label>
+				<ul style="text-indent: 5%">
+					<li>Android Marshmallow</li>
+					<li>2 GB RAM</li>
+					<li>5.2 inch Display</li>
+					<li>13 megapixel Primary Camera</li>
+					<li>3100 mah Battery</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<div data-role="page" id="SamsungJ7">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button2"
+				style="background-color: #369cda" data-icon="back"></a>
+			<h3 style="color: white">Product Detail</h3>
+		</div>
+		<label style="text-align: center"><b>SAMSUNG Galaxy J7 - 6
+				(New 2016 Edition) (Black, 16 GB)</b></label> <br /> <img
+			src="swim_images/samsungj7.jpg"
+			style="width: 50%; height: 50%; margin: 5% 25% 5% 25%" />
+		<div>
+			<label>Selling Price :</label> <label style="color: Red">Rs.
+				15990</label>
+
+		</div>
+		<a href="#" data-role="button" id="button0"
+			style="background-color: #fb8a3d; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="AtcJ7()">Add to Cart</a> <a href="#" data-role="button"
+			id="button0"
+			style="background-color: lime; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="buyJ7()">Buy Now</a>
+			<hr />
+			<br />
+			<div>
+				<label style="background-color: silver; text-indent: 5%">WARRANTY</label>
+				<label style="margin: 0% 5% 0% 5%">1 Year Manufacturer
+					Warranty For Phone And 6 Months Warranty For the Accessories In The
+					Box</label> <label style="background-color: silver; text-indent: 5%">SPECIFICATIONS</label>
+				<ul style="text-indent: 5%">
+					<li>Android Marshmallow</li>
+					<li>2 GB RAM</li>
+					<li>5.5 inch Display</li>
+					<li>13 megapixel Primary Camera</li>
+					<li>3300 mah Battery</li>
+				</ul>
+			</div>
+	</div>
+
+
+
+
+	<div data-role="page" id="LgG5">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button3"
+				style="background-color: #369cda" data-icon="back"></a>
+			<h3 style="color: white">Product Detail</h3>
+		</div>
+		<label style="text-align: center"><b>LG G5 (Silver, 32 GB)</b></label>
+		<br /> <img src="swim_images/lgG5.jpg"
+			style="width: 50%; height: 50%; margin: 5% 25% 5% 25%" />
+		<div>
+			<label>Selling Price :<del>RS. 52,900</del>
+			</label> <label style="color: Red">Rs. 47,990</label>
+
+		</div>
+		<a href="#" data-role="button" id="button0"
+			style="background-color: #fb8a3d; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="AtcG5()">Add to Cart</a> <a href="#" data-role="button"
+			id="button0"
+			style="background-color: lime; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="buyG5()">Buy Now</a>
+			<hr />
+			<br />
+			<div>
+				<label style="background-color: silver; text-indent: 5%">WARRANTY</label>
+				<label style="margin: 0% 5% 0% 5%">1 Year Manufacturer
+					Warranty For Phone And 6 Months Warranty For the Accessories In The
+					Box</label> <label style="background-color: silver; text-indent: 5%">SPECIFICATIONS</label>
+				<ul style="text-indent: 5%">
+					<li>Android Marshmallow</li>
+					<li>4 GB RAM</li>
+					<li>5.3 inch Display</li>
+					<li>16 megapixel Primary Camera</li>
+					<li>2800 mah Battery</li>
+				</ul>
+			</div>
+	</div>
+
+
+
+	<div data-role="page" id="MacPro">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button4"
+				style="background-color: #369cda" data-icon="back"></a>
+			<h3 style="color: white">Product Detail</h3>
+		</div>
+		<br /> <label style="text-align: center"><b>Apple MacBook
+				Pro MacBook Pro Series MJLQ2HN/A 2.2 GHz Quad Core Intel Core i7 -
+				(16 GB/256 GB SSD/Mac OS) Notebook MJLQ2HN/A</b></label> <br /> <img
+			src="swim_images/mac_pro.jpg"
+			style="width: 80%; height: 75%; margin: 5% 10% 5% 10%" />
+		<div>
+			<label>Selling Price :</label> <label style="color: Red">Rs.
+				143,898</label>
+
+		</div>
+		<a href="#" data-role="button" id="button0"
+			style="background-color: #fb8a3d; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="AtcMac()">Add to Cart</a> <a href="#" data-role="button"
+			id="button0"
+			style="background-color: lime; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="buyMac()">Buy Now</a>
+			<hr />
+			<br />
+			<div>
+				<label style="background-color: silver; text-indent: 5%">WARRANTY</label>
+				<label style="margin: 0% 5% 0% 5%">1 Year Manufacturer
+					Limited Warranty</label> 
+					<label style="background-color: silver; text-indent: 5%">PRODUCT INFO</label>
+				<ul style="text-indent: 5%">
+					<li>Intel 5th Gen Intel</li>
+					<li>Intel Iris Pro Graphics</li>
+					<li>Up to 9 hours Battery</li>
+				</ul>
+			</div>
+	</div>
+
+
+	<div data-role="page" id="HP">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button5"
+				style="background-color: #369cda" data-icon="back"></a>
+			<h3 style="color: white">Product Detail</h3>
+		</div>
+		<br /> <label style="text-align: center"><b>HP 15-ac123tx
+				Core i5 (5th Gen) - (4 GB/1 TB HDD/Windows 10/2 GB Graphics)
+				Notebook N8M28PA</b></label> <br /> <img src="swim_images/hp.jpg"
+			style="width: 80%; height: 75%; margin: 5% 10% 5% 10%" />
+		<div>
+			<label>Selling Price :</label> <label style="color: Red">Rs.
+				Rs. 40,990 </label>
+
+		</div>
+		<a href="#" data-role="button" id="button0"
+			style="background-color: #fb8a3d; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="AtcHp()">Add to Cart</a> <a href="#" data-role="button"
+			id="button0"
+			style="background-color: lime; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="buyHp()">Buy Now</a>
+			<div>
+			<hr />
+			<br />
+				<label style="background-color: silver; text-indent: 5%">WARRANTY</label>
+				<label style="margin: 0% 5% 0% 5%">1 Year Manufacturer Onsite Warranty</label> 
+					<label style="background-color: silver; text-indent: 5%">PRODUCT INFO</label>
+				<ul style="text-indent: 5%">
+					<li>Intel </li>
+					<li>AMD Radeon R5 M330 Graphics 2GB</li>
+					<li>CD/DVD Writer</li>
+				</ul>
+			</div>
+	</div>
+
+
+	<div data-role="page" id="AlienWare">
+		<div data-role="header" id="header1" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button6"
+				style="background-color: #369cda" data-icon="back"></a>
+			<h3 style="color: white;">Product Detail</h3>
+		</div>
+		<br /> <label style="text-align: center"><b>Alienware R2
+				R2 Core i7 - (16 GB/1 TB HDD/Windows 10/8 GB Graphics) Notebook
+				Z569971HIN9</b></label> <br /> <img src="swim_images/alienware.jpg"
+			style="width: 80%; height: 75%; margin: 5% 10% 5% 10%" />
+		<div>
+			<label>Selling Price :</label> <label style="color: Red">Rs.
+				166,991</label>
+		</div>
+		<a href="#" data-role="button" id="button0"
+			style="background-color: #fb8a3d; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="AtcAlien()">Add to Cart</a> <a href="#" data-role="button"
+			id="button0"
+			style="background-color: lime; color: white; width: 50%; margin-right: auto; margin-left: auto"
+			onclick="buyAlien()">Buy Now</a>
+			<div>
+			<hr />
+			<br />
+				<label style="background-color: silver; text-indent: 5%">WARRANTY</label>
+				<label style="margin: 0% 5% 0% 5%">1 Year Pro Support	, NBD Onsite with Accidental 
+				Damage Service</label> 
+					<label style="background-color: silver; text-indent: 5%">PRODUCT INFO</label>
+				<ul style="text-indent: 5%">
+					<li>Intel 6th Gen </li>
+					<li>Nvidea Geoforce Gtx 980M 8GB</li>
+				</ul>
+			</div>
+	</div>
+
+
+	<div data-role="page" id="Buy">
+		<div data-role="header" id="header2" data-position="fixed"
+			style="background-color: #369cda">
+			<a href="#page" data-role="button" id="button7"
+				style="color: #369cda">Home</a>
+			<h3 style="background-color: #369cda; color: white">CHECKOUT</h3>
+			<a href="#Cart" data-role="button" id="cartButton"
+				style="color: #369cda">Cart</a>
+		</div>
+		<div id="payment">
+			<label id="price1" style="text-align: center; color: #369cda"></label>
+			<label
+				style="text-align: center; font-size: 125%; margin-bottom: 10%">Payment
+				Method</label> <input type="radio" value="Cash On Delivery" id="cash"><label
+				for="cash">Cash On Delivery</label> <input type="radio"
+				value="Debit Card" id="debit"><label for="debit">Debit
+				Card</label> <input type="radio" value="Credit Card" id="credit"><label
+				for="credit">Credit Card</label> <input type="radio"
+				value="Gift Voucher" id="gift"><label for="gift">Gift
+				Voucher</label> <a href="#" data-role="button" id="button10"
+				style="color: white; background-color: #fb8a3d; border-color: white; margin: 10% 10% 0% 10%">PAY</a>
+		</div>
+	</div>
+
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+</body>
+</html>
