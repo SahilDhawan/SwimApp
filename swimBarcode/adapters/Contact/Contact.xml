@@ -20,9 +20,9 @@
 			<!-- Example for using MySQL connector, do not forget to put the MySQL connector library in the project's lib folder -->
 			<dataSourceDefinition>
 				<driverClass>com.mysql.jdbc.Driver</driverClass>
-				<url>jdbc:mysql://localhost:3306/mydb</url>
-			    <user>root</user>
-    			<password>tmobileg1*1</password> 
+				<url>jdbc:mysql://111.118.215.65:3306/digitu29_dil</url>
+			    <user>digitu29_satya</user>
+    			<password>satya1252</password> 
 			</dataSourceDefinition>
 		</connectionPolicy>
 		<loadConstraints maxConcurrentConnectionsPerNode="5" />

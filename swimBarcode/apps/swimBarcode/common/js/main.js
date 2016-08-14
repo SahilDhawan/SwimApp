@@ -32,8 +32,6 @@ var f = 0;
 function wlCommonInit(){
 }
 
-
-
 function login()
 {
 //	alert("This is test");

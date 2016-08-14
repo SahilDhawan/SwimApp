@@ -3,6 +3,7 @@
         <wb-resource deploy-path="/" source-path="/apps/swimBarcode/common"/>
         <wb-resource deploy-path="/" source-path="/www"/>
         <wb-resource deploy-path="/" source-path="/apps/swimBarcode/android"/>
+        <wb-resource deploy-path="/" source-path="/server/lib"/>
         <property name="context-root" value="swimBarcode"/>
     </wb-module>
 </project-modules>

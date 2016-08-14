@@ -64,7 +64,6 @@
 				id="label0" style="text-align: center; color: white"></label>
 		</div>
 	</div>
-
 	<div data-role="page" id="page" onLoad="slide()">
 
 		<div data-dojo-type="dojox.mobile.Container" id="Container"
@@ -87,7 +86,6 @@
 							function doScan(){
    							 cordova.exec(onScanSuccess, onScanFailure, 'BarcodeScanner', 'scan', []);
 								}
-
 							function onScanSuccess(result) {
  							 alert("We got a barcode\n" +
      						   "Result: " + result.text + "\n" +
@@ -110,15 +108,13 @@
 
 		</div>
 
-		<hr />
+		<hr>
 		<div class="mobiles" style="z-index: 3; position: relative">
 			<label id="label">NEW LAUNCHES-MOBILES</label>
 			<div class="j5">
-				<img src="swim_images/samsungj5.jpg" id="j5"><br /> <a
-					href="#SamsungJ5"
-					style="color: black; font-size: 80%; text-align: center">SAMSUNG
-					Galaxy J5</a> <br> <label><b style="text-align: center">RS.
-						12,990</b></label>
+				<img src="swim_images/samsungj5.jpg" id="j5"><br>
+				 <a	href="#SamsungJ5"	style="color: black; font-size: 80%; text-align: center ; padding : 10px">SAMSUNG Galaxy J5</a> <br>
+					 <label><b style="text-align: center">RS.	12,990</b></label>
 				<ul style="font-size: 50%">
 					<li>5.2" sAMOLED Display</li>
 					<li>13MP|5MP; Dual Flash</li>
@@ -127,11 +123,10 @@
 				</ul>
 			</div>
 			<div class="j7">
-				<img src="swim_images/samsungj7.jpg" id="j7"> <br /> <a
-					href="#SamsungJ7"
-					style="color: black; font-size: 80%; text-align: center">SAMSUNG
-					Galaxy J7</a> <br> <label><b style="text-align: center">RS.
-						15,990</b></label>
+				<img src="swim_images/samsungj7.jpg" id="j7"> <br>
+				 <a	href="#SamsungJ7"	style="color: black; font-size: 80%; text-align: center ; padding : 10px">
+				 SAMSUNG Galaxy J7</a> <br>
+				  <label><b style="text-align: center">RS. 	15,990</b></label>
 				<ul style="font-size: 50%">
 					<li>5.5" sAMOLED Display</li>
 					<li>13MP|5MP; Dual Flash</li>
@@ -140,9 +135,9 @@
 				</ul>
 			</div>
 			<div class="g5">
-				<img src="swim_images/lgG5.jpg" id="g5"> <br /> <a
+				<img src="swim_images/lgG5.jpg" id="g5"> <br> <a
 					href="#LgG5"
-					style="color: black; font-size: 80%; text-align: center">LG G5</a>
+					style="color: black; font-size: 80%; text-align: center ; padding : 10px">LG G5</a>
 				<br> <br> <label><b style="text-align: center">RS
 						47,990</b></label>
 				<ul style="font-size: 50%">
@@ -152,10 +147,11 @@
 				</ul>
 			</div>
 		</div>
-		<br /> <label style="text-align: center; z-index: 2; margin-top: 10%">NEW
+		<br> <label
+			style="text-align: center; z-index: 2; margin-top: 10%">NEW
 			LAUNCHES-LAPTOPS</label>
 		<div class="mobiles" style="z-index: 1; position: relative">
-			<hr />
+			<hr>
 			<div class="j5">
 				<img src="swim_images/mac_pro.jpg" id="mac_pro"> <a
 					href="#MacPro"
@@ -172,7 +168,7 @@
 			<div class="j7">
 				<img src="swim_images/hp.jpg" id="hp"> <a href="#HP"
 					style="color: black; font-size: 80%; text-align: center">HP
-					15-ac123tx</a> <br /> <label><b style="text-align: center">Rs.
+					15-ac123tx</a> <br> <label><b style="text-align: center">Rs.
 						40,990</b></label>
 				<ul style="font-size: 50%">
 					<li>AMD Radeon R5 GPU</li>
@@ -194,10 +190,15 @@
 					<li>Windows 10</li>
 				</ul>
 			</div>
-			<br />
+			<br>
 		</div>
-		<hr />
+		<hr>
 	</div>
+	
+	
+	
+
+	
 
 
 
@@ -532,16 +533,18 @@
 		</div>
 		<div id="payment">
 			<label id="price1" style="text-align: center; color: #369cda"></label>
-			<label
-				style="text-align: center; font-size: 125%; margin-bottom: 10%">Payment
-				Method</label> <input type="radio" value="Cash On Delivery" id="cash"><label
-				for="cash">Cash On Delivery</label> <input type="radio"
-				value="Debit Card" id="debit"><label for="debit">Debit
-				Card</label> <input type="radio" value="Credit Card" id="credit"><label
-				for="credit">Credit Card</label> <input type="radio"
-				value="Gift Voucher" id="gift"><label for="gift">Gift
-				Voucher</label> <a href="#" data-role="button" id="button10"
-				style="color: white; background-color: #fb8a3d; border-color: white; margin: 10% 10% 0% 10%">PAY</a>
+			<label	style="text-align: center; font-size: 125%; margin-bottom: 10%">
+			Payment Method</label> 
+			<input type="radio" value="Cash On Delivery" id="cash" name = "payment">
+			<label for="cash">Cash On Delivery</label>
+			 <input type="radio" value="Debit Card" id="debit" name = "payment">
+			 <label for="debit">Debit Card</label> 
+			 <input type="radio" value="Credit Card" id="credit" name = "payment">
+			 <label	for="credit">Credit Card</label> 
+			 <input type="radio"	value="Gift Voucher" id="gift" name = "payment">
+			 <label for="gift">Gift	Voucher</label> 
+			 <a href="#" data-role="button" id="button10"
+			  style="color: white; background-color: #fb8a3d; border-color: white; margin: 10% 10% 0% 10%">PAY</a>
 		</div>
 	</div>
 

@@ -4,5 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="server/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.st.core.runtimeClasspathProvider/com.ibm.worklight"/>
+	<classpathentry kind="lib" path="/Users/sahil/Documents/workspace/swimBarcode/server/lib/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="server/lib/mysql-connector-java-5.1.39-bin.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
